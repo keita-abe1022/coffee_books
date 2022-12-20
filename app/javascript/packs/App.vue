@@ -1,7 +1,9 @@
 <template>
   <!-- 一番外に必須。 -->
   <v-app id="app">
-    <router-view/>
+    <v-main>
+      <router-view/>
+    </v-main>
   </v-app>
 </template>
 
