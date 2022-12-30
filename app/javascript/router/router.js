@@ -9,5 +9,6 @@ export default new VueRouter( {
   mode: 'history',
   routes: [
   { path: '/', name: 'CoffeeHome', component: CoffeeHome },
+  { path: '/create', name: 'CoffeeCreate', component: CoffeeCreateO },
   ]
 });

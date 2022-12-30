@@ -15,6 +15,7 @@
     <v-toolbar-items>
       <v-btn to="/">Home</v-btn>
       <v-btn to="">About</v-btn>
+      <v-btn to="/create">コーヒーを記録</v-btn>
     </v-toolbar-items>
       <v-btn icon>
       <!-- Material iconを使用する。mdiをつけると使用可 -->
