@@ -10,7 +10,7 @@
     "turbolinks": "^5.2.0",
     "vue": "^2.6.10",
     "vue-axios": "^2.1.4",
-    "vue-loader": "^17.0.1",
+    "vue-loader": "^15.0.1",
     "vue-router": "^3.1.2",
     "vue-template-compiler": "^2.7.14",
     "vuetify": "^2.6.4",
@@ -21,6 +21,6 @@
   "devDependencies": {
     "@mdi/font": "^7.0.96",
     "@webpack-cli/serve": "^1.7.0",
-    "webpack-dev-server": "^4.11.1"
+    "webpack-dev-server": "^3.8.0"
   }
 }

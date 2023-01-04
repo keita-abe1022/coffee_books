@@ -36,7 +36,7 @@
         <v-card-text>価格：{{ coffeeInfo.price }}</v-card-text>
         <v-card-text>量：{{ coffeeInfo.weight }}</v-card-text>
         <v-card-text>購入方法：{{ coffeeInfo.purchasing_system }}</v-card-text>
-        <v-card-text>焙煎度：{{ coffeeInfo.degreee_of_roasting }}</v-card-text>
+        <v-card-text>焙煎度：{{ coffeeInfo.degree_of_roasting }}</v-card-text>
         <v-card-text>挽き方：{{ coffeeInfo.grind }}</v-card-text>
         <v-card-text>淹れ方：{{ coffeeInfo.brew }}</v-card-text>
         <v-card-text>購入店舗：{{ coffeeInfo.shop }}</v-card-text>

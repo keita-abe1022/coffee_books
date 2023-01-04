@@ -113,7 +113,7 @@ export default {
     return {
       coffee: {
         product_name: '',
-        pdoducing_area: '',
+        producing_area: '',
         price: '',
         weight: '',
         purchasing_system: '',
@@ -126,7 +126,7 @@ export default {
     }
   },
   methods: {
-    createCoffee: function() {
+    createCoffee: function () {
       if (!this.coffee.product_name) return;
       axios.post(
         '/api/coffees',
