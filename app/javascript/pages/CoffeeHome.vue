@@ -45,6 +45,12 @@
           :to="{ path: `/edit/$(coffeeInfo.id)` }"
         >
           編集
+        </v-btn
+        >
+        <v-btn
+          @click="deleteCoffee(coffeeInfo.id)"
+        >
+          削除
         </v-btn>
         </v-card>
       </v-col>
@@ -82,6 +88,14 @@ export default {
         this.coffeeInfo = res.data;
         this.coffeeInfoBool = true;
       });
+    },
+    deleteCoffee(id) {
+      axios.delete(`/api/coffees/${id}`).then(res => {
+        this.coffees = [];
+        this.coffeeInfo = '';
+        this.coffeeInfoBool = false;
+        this.fetchCoffees();
+      })
     }
   }
 }

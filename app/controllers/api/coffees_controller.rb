@@ -31,6 +31,15 @@ class Api::CoffeesController < ApplicationController
     end
   end
 
+  def destroy
+    @coffee = Coffee.find(params[:id])
+    if @coffee.destroy
+      head :no_content
+    else
+      render json: @coffee.errors, status: :unprocessable_entity
+    end
+  end
+
   private
   
     def coffee_params
