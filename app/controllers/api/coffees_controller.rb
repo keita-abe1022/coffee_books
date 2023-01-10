@@ -1,4 +1,5 @@
 class Api::CoffeesController < ApplicationController
+  protect_from_forgery :except => [:create, :update, :destroy]
 
   def index
     @coffees = Coffee.all
