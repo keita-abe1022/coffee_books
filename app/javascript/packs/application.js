@@ -6,6 +6,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from '../router/router.js'
+import store from '../store/store.js'
 import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
 import '@mdi/font/css/materialdesignicons.css'
@@ -18,6 +19,7 @@ Vue.config.productionTip = false
 document.addEventListener('DOMContentLoaded', () => {
   const app = new Vue({
     router,
+    store,
     vuetify,
     icons: {
       iconfont: 'mdi',
