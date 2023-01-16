@@ -23,3 +23,10 @@ comments = ["おいしい", "まずまず", "美味"]
     comment: comments[i]
   )
 end
+
+User.create!(
+  name: 'Admin User',
+  email: 'example@example.com',
+  password: 'foobar11',
+  password_confirmation: 'foobar11'
+)
