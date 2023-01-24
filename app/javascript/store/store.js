@@ -10,6 +10,7 @@ export default new Vuex.Store({
     coffees: [],
     coffeeInfo: {},
     coffeeInfoBool: false,
+    signedIn: '',
   },
   mutations: {
     fetchCoffees(state) {
@@ -36,5 +37,14 @@ export default new Vuex.Store({
         state.coffeeInfoBool = false;
       });
     },
+    fetchSignedIn(state) {
+      // ログイン時BooleanがlocalStorageに保存される
+      state.signedIn = !!localStorage.signedIn
+    },
+  },
+  actions: {
+    doFetchSignedIn({ commit }) {
+      commit('fetchSignedIn')
+    }
   }
 })

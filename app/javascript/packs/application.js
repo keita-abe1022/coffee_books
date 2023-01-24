@@ -9,18 +9,26 @@ import router from '../router/router.js'
 import store from '../store/store.js'
 import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
+import VueAxios from 'vue-axios'
+import { securedAxiosInstance, plainAxiosInstance } from '../backend/axios/axios.js'
 import '@mdi/font/css/materialdesignicons.css'
 
 Vue.use(Vuetify)
 const vuetify = new Vuetify();
 
 Vue.config.productionTip = false
+Vue.use(VueAxios, {
+  secured: securedAxiosInstance,
+  plain: plainAxiosInstance
+})
 
 document.addEventListener('DOMContentLoaded', () => {
   const app = new Vue({
     router,
     store,
     vuetify,
+    securedAxiosInstance,
+    plainAxiosInstance,
     icons: {
       iconfont: 'mdi',
     },
