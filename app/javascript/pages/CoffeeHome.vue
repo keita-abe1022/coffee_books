@@ -42,7 +42,7 @@
         <v-card-text>購入店舗：{{ coffeeInfo.shop }}</v-card-text>
         <v-card-text>コメント：{{ coffeeInfo.comment }}</v-card-text>
         <v-btn
-          :to="{ path: `/edit/$(coffeeInfo.id)` }"
+          :to="{ path: `/edit/${coffeeInfo.id}` }"
         >
           編集
         </v-btn

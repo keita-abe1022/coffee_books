@@ -24,7 +24,7 @@ class Api::CoffeesController < ApplicationController
 
   def update
     @coffee = Coffee.find(params[:id])
-    if @coffee.update_attributes(coffee_params)
+    if @coffee.update(coffee_params)
       render 'index', formats: :json, handlers: 'jbuilder'
     else
       render json: @coffee.errors,
