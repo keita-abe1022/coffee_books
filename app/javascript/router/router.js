@@ -15,8 +15,8 @@ export default new VueRouter( {
   mode: 'history',
   routes: [
   { path: '/', name: 'CoffeeHome', component: CoffeeHome },
-  { path: '/create', name: 'CoffeeCreate', component: CoffeeCreate },
-  { path: '/edit/:id', name: 'CoffeeEdit', component: CoffeeEdit},
+  { path: '/coffee/create', name: 'CoffeeCreate', component: CoffeeCreate },
+  { path: '/coffee/:id/edit', name: 'CoffeeEdit', component: CoffeeEdit},
   { path: '/signup', name: 'Signup', component: Signup },
   { path: '/signin', name: 'Signin', component: Signin },
   ]

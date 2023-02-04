@@ -15,9 +15,9 @@
     <v-toolbar-items>
       <v-btn to="/">Home</v-btn>
       <v-btn to="">About</v-btn>
-      <v-btn to="/create">コーヒーを記録</v-btn>
-      <v-btn to="signup" v-if="!signedIn">新規登録</v-btn>
-      <v-btn to="signin" v-if="!signedIn">ログイン</v-btn>
+      <v-btn to="/coffee/create">コーヒーを記録</v-btn>
+      <v-btn to="/signup" v-if="!signedIn">新規登録</v-btn>
+      <v-btn to="/signin" v-if="!signedIn">ログイン</v-btn>
       <v-btn to="/" v-if="signedIn" @click="signOut">ログアウト</v-btn>
     </v-toolbar-items>
       <v-btn icon>
