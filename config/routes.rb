@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get '/create', to:  'home#index'
   get '/edit/:id', to: 'home#index'
   get '/user/:id', to: 'home#index'
+  
   namespace :api do
     resources :coffees, only: [:index, :show, :create, :update, :destroy]
     post 'signup', controller: :users, action: :create

@@ -45,7 +45,7 @@ class Api::CoffeesController < ApplicationController
   
     def coffee_params
       params.fetch(:coffee, {}).permit(
-        :product_name, :price, :weight, :purchasing_system, :degree_of_roasting, :grind, :brew, :shop, :comment
+        :product_name, :producing_area, :price, :weight, :purchasing_system, :degree_of_roasting, :grind, :brew, :shop, :comment
       )
     end
 

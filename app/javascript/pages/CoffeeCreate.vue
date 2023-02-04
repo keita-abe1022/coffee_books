@@ -108,6 +108,7 @@
 </template>
 
 <script>
+import axios from 'axios';
 export default {
   data: function() {
     return {
@@ -128,15 +129,12 @@ export default {
   methods: {
     createCoffee: function () {
       if (!this.coffee.product_name) return;
-      axios.post(
-        '/api/coffees',
-        { coffee: this.coffee })
-        .then(res => {
-          this.$router.push({ path: '/' });
-        })
-        .catch(error => {
+      axios.post('/api/coffees',{ coffee: this.coffee })
+      .then((res) => {
+        this.$router.push({ path: '/' });
+      },(error) => {
           console.log(error);
-        });
+      });
     }
   }
 }
