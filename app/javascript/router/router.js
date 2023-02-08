@@ -7,7 +7,7 @@ import CoffeeEdit from '../pages/CoffeeEdit.vue'
 // 新規登録・ログインページ
 import Signup from '../pages/Signup.vue'
 import Signin from '../pages/Signin.vue'
-
+import UserShow from '../pages/users/UserShow.vue'
 
 Vue.use(VueRouter)
 
@@ -19,5 +19,6 @@ export default new VueRouter( {
   { path: '/coffee/:id/edit', name: 'CoffeeEdit', component: CoffeeEdit},
   { path: '/signup', name: 'Signup', component: Signup },
   { path: '/signin', name: 'Signin', component: Signin },
+  { path: '/users/:id', name: 'UserShow', component: UserShow },
   ]
 });
