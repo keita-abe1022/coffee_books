@@ -64,7 +64,7 @@ import axios from 'axios'
 export default {
   name: 'CoffeeHome',
   computed: {
-    // [store.js]から[coffees]を呼び出して，[CoffeeHome.vue]のdata[coffees]に格納
+    // [store.js]から[coffees]を呼び出して，[CoffeeHome.vue]のdata[user]に格納
     coffees() {
       return this.$store.state.coffees
     },

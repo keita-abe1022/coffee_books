@@ -1,6 +1,6 @@
 <template>
-  <v-app id="inspire">
-    <v-system-bar>
+  <v-container>
+    <!-- <v-system-bar>
       <v-spacer></v-spacer>
 
       <v-icon>mdi-square</v-icon>
@@ -69,11 +69,16 @@
           variant="solo"
         ></v-text-field>
       </v-responsive>
-    </v-app-bar>
+    </v-app-bar> -->
+    <v-raw
+      v-show="userInfoBool"
+    >
+      <v-col>
+        <v-text-field>{{ userInfo.name }}</v-text-field>
+      </v-col>
+    </v-raw>
 
-    <v-main><!--  --></v-main>
-
-    <v-navigation-drawer location="right">
+    <!-- <v-navigation-drawer location="right">
       <v-list>
         <v-list-item
           v-for="n in 5"
@@ -83,25 +88,33 @@
         >
         </v-list-item>
       </v-list>
-    </v-navigation-drawer>
-
-    <v-footer
-      app
-      height="72"
-    >
-      <v-text-field
-        bg-color="grey-lighten-1"
-        class="rounded-pill overflow-hidden"
-        density="compact"
-        hide-details
-        variant="solo"
-      ></v-text-field>
-    </v-footer>
-  </v-app>
+    </v-navigation-drawer> -->
+  </v-container>
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
+  name: 'UserShow',
+  data: function() {
+    return {
+    userInfo: {},
+    userInfoBool: false
+    }
+  },
+  computed: {
+  // [store.js]から[user]を呼び出して，[CoffeeHome.vue]のdata[coffees]に格納
+  },
+
+  method: {
+    setUserInfo(id){
+      axios.get(`api/users/${id}.json`).then(res => {
+        this.userInfo = res.data;
+        this.userInfoBool = true;
+      });
+    }
+  },
 
 }
 </script>
