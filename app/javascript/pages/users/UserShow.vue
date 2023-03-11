@@ -100,14 +100,25 @@ export default {
   data: function() {
     return {
     userInfo: {},
-    userInfoBool: false
+    userInfoBool: false,
+    user: {}
     }
   },
   computed: {
   // [store.js]から[user]を呼び出して，[CoffeeHome.vue]のdata[coffees]に格納
   },
-
+  mounted: function() {
+    this.fetchUser();
+  },
   method: {
+    fetchUser() {
+      axios.get(`/api/users/${id}`).then((res) =>{
+        this.user.push(res.data.user);
+        } 
+      ), (error) => {
+        console.log(error);
+      }
+    },
     setUserInfo(id){
       axios.get(`api/users/${id}.json`).then(res => {
         this.userInfo = res.data;
