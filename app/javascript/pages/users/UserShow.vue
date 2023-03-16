@@ -71,10 +71,11 @@
       </v-responsive>
     </v-app-bar> -->
     <v-raw
-      v-show="userInfoBool"
     >
       <v-col>
-        <v-text-field>{{ userInfo.name }}</v-text-field>
+        <v-text-field>
+          {{ userInfo.name }}
+        </v-text-field>
       </v-col>
     </v-raw>
 
@@ -100,7 +101,7 @@ export default {
   data: function() {
     return {
     userInfo: {},
-    userInfoBool: false,
+    // userInfoBool: false,
     user: {}
     }
   },
@@ -120,9 +121,9 @@ export default {
       }
     },
     setUserInfo(id){
-      axios.get(`api/users/${id}.json`).then(res => {
+      axios.get(`/api/users/${id}.json`).then(res => {
         this.userInfo = res.data;
-        this.userInfoBool = true;
+        // this.userInfoBool = true;
       });
     }
   },
